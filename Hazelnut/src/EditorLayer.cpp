@@ -193,6 +193,9 @@ namespace Hazel {
 		{
 			if (ImGui::BeginMenu("File"))
 			{
+				if (ImGui::MenuItem("New Project..."))
+					HZ_TRACE("{0}", FileDialogs::OpenDir());
+
 				if (ImGui::MenuItem("Open Project...", "Ctrl+O"))
 					OpenProject();
 
